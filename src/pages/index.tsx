@@ -10,9 +10,6 @@ const Home: NextPage = () => {
       <Link href="/about-old">
         <a>about</a>
       </Link>
-      <Link href="/news-old">
-        <a>news</a>
-      </Link>
     </div>
   )
 }
