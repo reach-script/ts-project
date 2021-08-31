@@ -5,8 +5,11 @@ import styles from '../../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Link href="/about-old">
+      <Link href="/about">
         <a>about</a>
+      </Link>
+      <Link href="/my-page">
+        <a>my-page</a>
       </Link>
     </div>
   )
