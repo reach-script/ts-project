@@ -39,13 +39,14 @@ const Foods: NextPage = () => {
 
 export default Foods;
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const foods = [
-//     { id: "1", name: "ラーメン", price: 1000 },
-//     { id: "2", name: "焼肉", price: 2000 }
-//   ]
-//   console.log(foods)
-//   return {
-//     props: { foods }
-//   }
-// }
+export const getServerSideProps: GetServerSideProps = async () => {
+  throw new Error();
+  const foods = [
+    { id: '1', name: 'ラーメン', price: 1000 },
+    { id: '2', name: '焼肉', price: 2000 },
+  ];
+  console.log(foods);
+  return {
+    props: { foods },
+  };
+};
