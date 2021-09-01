@@ -12,7 +12,7 @@ type Props = {
   foods: Array<Food>;
 };
 
-const Foods: NextPage<Props> = (props) => {
+const Foods: NextPage = () => {
   const [foods, setFoods] = useState<Array<Food>>([]);
   useEffect(() => {
     const getFoods = async () => {
