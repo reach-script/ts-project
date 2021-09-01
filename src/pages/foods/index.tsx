@@ -13,7 +13,6 @@ type Props = {
 };
 
 const Foods: NextPage<Props> = (props) => {
-  // const { foods } = props;
   const [foods, setFoods] = useState<Array<Food>>([]);
   useEffect(() => {
     const getFoods = async () => {
