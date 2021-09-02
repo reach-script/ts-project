@@ -3,4 +3,5 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "eslint.validate": ["html", "javascriptreact", "typescriptreact"],
+  "cSpell.words": ["dafmd", "oianjerf"]
 }

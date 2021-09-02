@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 const Home: NextPage = () => {
+  const router = useRouter();
+  const onClickAbout = () => router.push('/about');
   return (
     <div className={styles.container}>
-      <Link href="/about">
-        <a>about</a>
-      </Link>
+      <button onClick={onClickAbout}>about</button>
       <Link href="/my-page">
         <a>my-page</a>
       </Link>
