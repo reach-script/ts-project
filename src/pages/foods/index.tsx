@@ -12,13 +12,14 @@ type Props = {
   foods: Array<Food>;
 };
 
-const Foods: NextPage = () => {
+const Foods: NextPage<Props> = (props) => {
   const [foods, setFoods] = useState<Array<Food>>([]);
   useEffect(() => {
     const getFoods = async () => {
       const response = await fetch('api/food');
       const data = await response.json();
       setFoods(data);
+      console.log('useEffect', data);
     };
     getFoods();
   }, []);
@@ -39,13 +40,13 @@ const Foods: NextPage = () => {
 
 export default Foods;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const foods = [
-    { id: '1', name: 'ラーメン', price: 1000 },
-    { id: '2', name: '焼肉', price: 2000 },
-  ];
-  console.log('env:', process.env.NEXT_PUBLIC_API_KEY);
-  return {
-    props: { foods },
-  };
-};
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const foods = [
+//     { id: '1', name: 'ラーメン', price: 1000 },
+//     { id: '2', name: '焼肉', price: 2000 },
+//   ];
+//   console.log('env:', process.env.NEXT_PUBLIC_API_KEY);
+//   return {
+//     props: { foods },
+//   };
+// };
